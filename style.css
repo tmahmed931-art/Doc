@@ -680,3 +680,22 @@ footer {
     background: #d4ff00;
     color: black;
 }
+
+/* Watermark */
+.watermark {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(212, 255, 0, 0.2);
+    pointer-events: none;
+    z-index: 9999;
+    font-family: 'Tajawal', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 12px;
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+}
