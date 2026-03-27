@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دكتور جيم | التمارين</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-dumbbell"></i></div>
+                <div>
+                    <h1>DOCTOR <span>GYM</span></h1>
+                    <p>بإدارة الكوتش بوضى</p>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="exercises.html" class="active">التمارين</a>
+                <a href="calculator.html">الحاسبة</a>
+                <a href="supplements.html">المكملات</a>
+                <a href="equipment.html">المعدات</a>
+            </nav>
+            <button class="btn-primary join-btn">انضم إلينا</button>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">الرئيسية</a>
+            <a href="exercises.html">التمارين</a>
+            <a href="calculator.html">الحاسبة</a>
+            <a href="supplements.html">المكملات</a>
+            <a href="equipment.html">المعدات</a>
+            <button class="btn-primary">انضم إلينا</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="padding-top: 120px;">
+            <div class="section-header">
+                <div class="section-badge">تمارين مصورة</div>
+                <h2>اختر التمرين المناسب لك</h2>
+            </div>
+
+            <div class="filter-buttons" id="filterButtons">
+                <button data-filter="all" class="filter-btn active">الكل</button>
+                <button data-filter="chest" class="filter-btn">الصدر</button>
+                <button data-filter="back" class="filter-btn">الظهر</button>
+                <button data-filter="legs" class="filter-btn">الأرجل</button>
+                <button data-filter="arms" class="filter-btn">الذراعين</button>
+                <button data-filter="shoulders" class="filter-btn">الأكتاف</button>
+                <button data-filter="abs" class="filter-btn">البطن</button>
+            </div>
+
+            <div class="exercises-grid" id="exercisesGrid"></div>
+        </div>
+    </main>
+
+    <div id="exerciseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-video" id="modalVideo">
+                    <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <button class="modal-close" id="closeModalBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-badges">
+                    <span class="exercise-badge badge-level" id="modalLevel"></span>
+                    <span class="exercise-badge badge-muscle" id="modalMuscle"></span>
+                </div>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-desc" id="modalDesc"></p>
+                <div class="modal-stats" id="modalStats"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 دكتور جيم. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="exercises-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
